@@ -16,9 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var platterView: UIView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     let ImageArray = [
+        "bg-0.jpeg",
         "bg-1.jpeg",
         "bg-2.jpeg",
         "bg-3.jpeg",
+        "bg-4.jpeg",
     ]
 
     override func viewDidLoad() {
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
         }
         platterView.layer.cornerRadius = 10
         platterView.clipsToBounds = true
+        dayLabel.font = .boldSystemFont(ofSize: 47)
+
     super.viewDidLoad()
 
     }
@@ -70,6 +74,7 @@ class ViewController: UIViewController {
         competitionDate.year = yearint!
         competitionDate.month = monthint!
         competitionDate.day = dayint!
+        
         competitionDate.hour = 00
         competitionDate.minute = 00
         let competitionDay = userCalendar.date(from: competitionDate as DateComponents)!
@@ -96,6 +101,8 @@ class ViewController: UIViewController {
         let randomNumber = Int(unsignedRandomNumber)
         return UIImage(named: ImageArray[randomNumber])!
     }
-    
+    func darkMode(){
+        
+    }
 }
 

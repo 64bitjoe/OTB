@@ -27,7 +27,7 @@
         <!--OTB-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="OTB" id="BYZ-38-t0r" customClass="ViewController" customModule="OTB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="OTB" id="BYZ-38-t0r" customClass="ViewController" customModule="O_T_B" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,8 @@
                                     <constraint firstAttribute="width" constant="48" id="Em5-R2-vPw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" image="square.and.pencil" catalog="system">
+                                <color key="tintColor" name="OtbTint"/>
+                                <state key="normal" image="list.dash" catalog="system">
                                     <color key="titleColor" name="OtbTint"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" weight="bold"/>
                                 </state>
@@ -70,16 +71,16 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-5L-HSI">
                                                 <rect key="frame" x="0.0" y="0.0" width="218" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="FGTint"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51 Days " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaY-D0-66f">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51 Days " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaY-D0-66f">
                                                 <rect key="frame" x="0.0" y="23" width="218" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="GJ3-2v-4oC"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="57"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <color key="textColor" name="FGTint"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lX-is-79r">
@@ -88,13 +89,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Hours " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWg-Sj-uvw">
                                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="FGTint"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="5 Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt8-Dm-6t9">
                                                         <rect key="frame" x="85.5" y="0.0" width="132.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="FGTint"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -103,15 +104,16 @@
                                         <constraints>
                                             <constraint firstItem="k6d-5L-HSI" firstAttribute="centerX" secondItem="arL-Gt-XEc" secondAttribute="centerX" id="38q-nH-2kV"/>
                                             <constraint firstItem="9lX-is-79r" firstAttribute="centerX" secondItem="arL-Gt-XEc" secondAttribute="centerX" id="Wdo-vh-M3x"/>
+                                            <constraint firstItem="AaY-D0-66f" firstAttribute="centerX" secondItem="arL-Gt-XEc" secondAttribute="centerX" id="vrP-Ve-kFt"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Change this to someting insperatiotional.&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ9-PL-mXb">
-                                        <rect key="frame" x="17.5" y="282" width="317.5" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Put something inspirational here&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ9-PL-mXb">
+                                        <rect key="frame" x="49" y="282" width="254" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="K1M-RD-Prz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16.5"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="FGTint"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -173,7 +175,7 @@
         <!--Change Date-->
         <scene sceneID="tCK-le-KU1">
             <objects>
-                <viewController storyboardIdentifier="DatePicker" title="Change Date" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eGT-wQ-EbJ" customClass="DatePickerController" customModule="OTB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DatePicker" title="Change Date" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eGT-wQ-EbJ" customClass="DatePickerController" customModule="O_T_B" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J5c-mp-Spn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,6 +219,16 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" name="OtbTint"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fl-6f-zZl">
+                                <rect key="frame" x="353" y="44" width="41" height="39"/>
+                                <color key="tintColor" name="OtbTint"/>
+                                <state key="normal" image="gear" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsButton:" destination="eGT-wQ-EbJ" eventType="touchUpInside" id="ZxA-Es-EO9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="BGTint"/>
                         <constraints>
@@ -225,7 +237,9 @@
                             <constraint firstItem="aoh-yG-qog" firstAttribute="centerX" secondItem="yel-1F-kiN" secondAttribute="centerX" id="SIR-ng-P70"/>
                             <constraint firstItem="aoh-yG-qog" firstAttribute="top" secondItem="5bG-5G-Ypt" secondAttribute="bottom" constant="91" id="Svp-Wo-Jao"/>
                             <constraint firstItem="yel-1F-kiN" firstAttribute="leading" secondItem="NEp-Jr-VSz" secondAttribute="leading" id="bTy-rj-2gL"/>
+                            <constraint firstItem="6Fl-6f-zZl" firstAttribute="trailing" secondItem="J5c-mp-Spn" secondAttribute="trailingMargin" id="gvz-I8-BoH"/>
                             <constraint firstItem="aoh-yG-qog" firstAttribute="leading" secondItem="NEp-Jr-VSz" secondAttribute="leading" constant="182" id="hQj-2f-LUm"/>
+                            <constraint firstItem="6Fl-6f-zZl" firstAttribute="top" secondItem="NEp-Jr-VSz" secondAttribute="top" id="ifX-xB-T4v"/>
                             <constraint firstItem="yel-1F-kiN" firstAttribute="top" secondItem="aoh-yG-qog" secondAttribute="bottom" constant="78" id="p4X-Eg-TZZ"/>
                             <constraint firstItem="SQ4-te-FYU" firstAttribute="top" secondItem="NEp-Jr-VSz" secondAttribute="top" constant="248" id="pXr-UI-ecD"/>
                             <constraint firstItem="5bG-5G-Ypt" firstAttribute="centerX" secondItem="aoh-yG-qog" secondAttribute="centerX" id="qCg-WQ-vcB"/>
@@ -246,18 +260,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="list.dash" catalog="system" width="64" height="42"/>
         <namedColor name="BGTint">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="FGTint">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="OtbTint">
-            <color red="0.89535170789999996" green="0.32845315337181091" blue="0.25483292340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.15718410909175873" green="0.55664300918579102" blue="0.25499999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="PlatterTint">
-            <color red="0.70690387487411499" green="0.46207237239999999" blue="0.32794773578643799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.22967493534088135" green="0.46200001239776611" blue="0.25299999117851257" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
     <color key="tintColor" name="FGTint"/>

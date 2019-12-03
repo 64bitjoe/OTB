@@ -27,8 +27,7 @@ class DatePickerController: ViewController {
            let strDate = dateFormatter.string(from: datePicker.date)
            
            print(strDate)
-        //Save each part as one string in userdefaults
-        //update main view
+
 
     }
     
@@ -47,6 +46,10 @@ class DatePickerController: ViewController {
         defaults.synchronize()
         navigationController?.dismiss(animated: true, completion: nil)
         
+    }
+    @IBAction func settingsButton(_ sender: Any) {
+        
+    overrideUserInterfaceStyle = .dark
     }
     
 }
