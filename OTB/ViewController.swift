@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     ]
 
     override func viewDidLoad() {
+        firstLaunch()
+        
         updateTimer()
         if #available(iOS 13.0, *) {
             let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .heavy, scale: .large)
@@ -33,6 +35,7 @@ class ViewController: UIViewController {
         } else {
             return
         }
+
         platterView.layer.cornerRadius = 10
         platterView.clipsToBounds = true
         dayLabel.font = .boldSystemFont(ofSize: 47)
@@ -101,8 +104,40 @@ class ViewController: UIViewController {
         let randomNumber = Int(unsignedRandomNumber)
         return UIImage(named: ImageArray[randomNumber])!
     }
-    func darkMode(){
+
+    @IBAction func shareButtonClicked(sender: AnyObject)
+      {
+          //Set the default sharing message.
+        let message = "OTB reports I have  \(dayLabel.text ?? "UNKNOWN") left"
+        // Add array and radomize the message
+          //Set the link to share.
+          if let link = NSURL(string: "http://www.joeis.us")
         
+          {
+            let objectsToShare = [message,link] as [Any]
+              let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+            self.present(activityVC, animated: true, completion: nil)
+          }
+      }
+    func firstLaunch(){
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchednever")
+        if launchedBefore {
+            print("Not First Launch")
+        } else {
+            let strDate = "01-01-2020"
+            let result = strDate.split(separator: "-")
+            let defaults = UserDefaults.standard
+            UserDefaults.standard.set(String(result[0]), forKey: "day")
+            UserDefaults.standard.set(String(result[1]), forKey: "month")
+            UserDefaults.standard.set(String(result[2]), forKey: "year")
+            defaults.synchronize()
+            UserDefaults.standard.set(true, forKey: "launchednever")
+            
+            //display UI alert Giving option to set First Coundown timer
+            
+        }
     }
+    
 }
 
