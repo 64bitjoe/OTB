@@ -107,12 +107,12 @@
                                             <constraint firstItem="AaY-D0-66f" firstAttribute="centerX" secondItem="arL-Gt-XEc" secondAttribute="centerX" id="vrP-Ve-kFt"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Put something inspirational here&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ9-PL-mXb">
-                                        <rect key="frame" x="49" y="282" width="254" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Put something inspirational here&quot;" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ9-PL-mXb">
+                                        <rect key="frame" x="46" y="235" width="260.5" height="67"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="K1M-RD-Prz"/>
+                                            <constraint firstAttribute="height" constant="67" id="K1M-RD-Prz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" name="FGTint"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -131,10 +131,12 @@
                                 <color key="backgroundColor" name="PlatterTint"/>
                                 <constraints>
                                     <constraint firstItem="arL-Gt-XEc" firstAttribute="centerX" secondItem="QJ9-PL-mXb" secondAttribute="centerX" id="0a3-wE-NOy"/>
+                                    <constraint firstItem="QJ9-PL-mXb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xgT-YI-Tcr" secondAttribute="leading" id="0rf-HK-AX6"/>
                                     <constraint firstItem="PNO-eU-gH2" firstAttribute="leading" secondItem="xgT-YI-Tcr" secondAttribute="leadingMargin" id="65T-SD-XlK"/>
                                     <constraint firstItem="arL-Gt-XEc" firstAttribute="centerX" secondItem="xgT-YI-Tcr" secondAttribute="centerX" id="JYR-Q5-QeD"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QJ9-PL-mXb" secondAttribute="trailing" id="Ngw-Zv-EsS"/>
                                     <constraint firstItem="C4e-5u-Bbk" firstAttribute="trailing" secondItem="xgT-YI-Tcr" secondAttribute="trailingMargin" id="UHE-LX-Tyb"/>
-                                    <constraint firstItem="QJ9-PL-mXb" firstAttribute="top" secondItem="arL-Gt-XEc" secondAttribute="bottom" constant="100" id="V6Q-hA-Aef"/>
+                                    <constraint firstItem="QJ9-PL-mXb" firstAttribute="top" secondItem="arL-Gt-XEc" secondAttribute="bottom" constant="53" id="V6Q-hA-Aef"/>
                                     <constraint firstItem="arL-Gt-XEc" firstAttribute="centerX" secondItem="xgT-YI-Tcr" secondAttribute="centerX" id="dhv-y9-EEi"/>
                                     <constraint firstItem="arL-Gt-XEc" firstAttribute="top" secondItem="xgT-YI-Tcr" secondAttribute="top" constant="75" id="jsl-rV-pBm"/>
                                     <constraint firstItem="C4e-5u-Bbk" firstAttribute="top" secondItem="PNO-eU-gH2" secondAttribute="top" id="m24-Je-B9J"/>
@@ -177,6 +179,7 @@
                         <outlet property="editButton" destination="YrR-hW-2nv" id="Baq-ty-KnM"/>
                         <outlet property="hrLabel" destination="cWg-Sj-uvw" id="awK-U6-24g"/>
                         <outlet property="imageView" destination="PNO-eU-gH2" id="Y00-Bd-SJ8"/>
+                        <outlet property="inspirationLabel" destination="QJ9-PL-mXb" id="SFY-9e-MNI"/>
                         <outlet property="minLabel" destination="Zt8-Dm-6t9" id="nWX-QR-ABd"/>
                         <outlet property="platterView" destination="xgT-YI-Tcr" id="kAD-PF-k0z"/>
                     </connections>
