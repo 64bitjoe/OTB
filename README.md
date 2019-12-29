@@ -4,7 +4,7 @@
 
 Countdown to the day and hour.
 Simple beautiful timers ♥️⏰😎
-## What Works
+## What works
 
 * Change timers Within app
 * Random specified background
@@ -21,5 +21,8 @@ Simple beautiful timers ♥️⏰😎
  * [#OTBAPP website](otb.joeis.us)
  * [Find me on Twitter](twitter.com/64bitjoe)
  * [Find me on Insta](Instagram.com/64bitjoe)
-</p>
+ 
+ <p align="center">
   <img src="https://otb.joeis.us/assets/appDark.png" width ="350">
+  </p>
+</p>
