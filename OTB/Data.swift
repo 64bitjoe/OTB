@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 // MARK: SHARE TIME 
 
 let SHARE_0 = "I have __DAYS__ #OTBAPP 🥳"
@@ -21,7 +22,7 @@ let QUOTE_1 = "\"Dont Fuck it up - Logan 2019 - Joe 2019\""
 let QUOTE_2 = "I think it’s great that they’re doing this, and I hope it works out."
 let QUOTE_3 = "Most important, have the courage to follow your heart and intuition."
 let QUOTE_4 = "\"Be proud of yourself. Do the best work of your life.\""
-let QUOTE_5 = "\"Stop looking for a countdown. Look at the road ahead.\""
+let QUOTE_5 = "\"Do you still work here?\""
 
 
 // MARK: DECLARE ARRAY OF DATA
@@ -51,4 +52,20 @@ let ImageArray = [
     "bg-3.jpeg",
     "bg-4.jpeg",
 ]
+
+func randomImage() -> UIImage {
+    let unsignedArrayCount = UInt32(ImageArray.count)
+    let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+    let randomNumber = Int(unsignedRandomNumber)
+    return UIImage(named: ImageArray[randomNumber])!
+}
+
+
+func randomText() -> String {
+    return QUARRAY[Int(arc4random_uniform(UInt32(QUARRAY.count)))]
+}
+
+func randomShare() -> String {
+    return SHARRAY[Int(arc4random_uniform(UInt32(SHARRAY.count)))]
+}
 
