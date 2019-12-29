@@ -22,4 +22,4 @@ Simple beautiful timers ♥️⏰😎
  * [Find me on Twitter](twitter.com/64bitjoe)
  * [Find me on Insta](Instagram.com/64bitjoe)
 </p>
-  <img src="https://otb.joeis.us/appFullshot.png" width ="600" >
+  <img src="https://otb.joeis.us/appFullshot_Dark_Light.png" width ="600" >
