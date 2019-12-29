@@ -4,5 +4,5 @@
 
 Countdown to the day and hour.
 Simple beautiful timers ♥️⏰😎
-  <img src="https://otb.joeis.us/appFullshot.png" width ="200" >
 </p>
+  <img src="https://otb.joeis.us/appFullshot.png" width ="200" >
