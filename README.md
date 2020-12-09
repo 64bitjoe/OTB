@@ -1,6 +1,6 @@
 # OTB
 <p align="center">
-  <img src="https://otb.joeis.us/app-icon.png" width="100" >
+  <img src="https://joeis.us/assets/img/OTB-app-icon.png" width="100" >
 
 Countdown to the day and hour.
 Simple beautiful timers ♥️⏰😎
@@ -23,6 +23,6 @@ Simple beautiful timers ♥️⏰😎
  * [Find me on Insta](Instagram.com/64bitjoe)
  
  <p align="center">
-  <img src="https://otb.joeis.us/assets/appDark.png" width ="350">
+  <img src="https://joeis.us/assets/img/portfolio/content/OTB_Mockup.jp2" width ="350">
   </p>
 </p>
