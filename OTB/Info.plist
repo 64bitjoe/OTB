@@ -2,8 +2,46 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleAlternateIcons</key>
+			<dict>
+				<key>Watermelon</key>
+				<dict>
+					<key>CFBundleIconFiles</key>
+					<array/>
+					<key>Item 0</key>
+					<string>Watermelon</string>
+				</dict>
+				<key>Aura</key>
+				<dict>
+					<key>CFBundleIconFiles</key>
+					<array/>
+					<key>Item 0</key>
+					<string>Arura</string>
+				</dict>
+				<key>AuraNoir</key>
+				<dict>
+					<key>CFBundleIconFiles</key>
+					<array/>
+					<key>Item 0</key>
+					<string>Arura_Noir</string>
+				</dict>
+			</dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string></string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Timeless</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

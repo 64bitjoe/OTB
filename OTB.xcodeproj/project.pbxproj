@@ -18,6 +18,12 @@
 		4182D6CF238AE6B100C45A45 /* OTBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182D6CE238AE6B100C45A45 /* OTBUITests.swift */; };
 		41A69BF52398B6030091F811 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A69BF42398B6030091F811 /* Data.swift */; };
 		41F9E19B238B20B400A687DE /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F9E19A238B20B400A687DE /* DatePickerController.swift */; };
+		D8FA3535263CBAD400C17D39 /* Arura_Noir@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FA352F263CBAD400C17D39 /* Arura_Noir@2x.png */; };
+		D8FA3536263CBAD400C17D39 /* Arura_Noir@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FA3530263CBAD400C17D39 /* Arura_Noir@3x.png */; };
+		D8FA3537263CBAD400C17D39 /* Arura@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FA3531263CBAD400C17D39 /* Arura@2x.png */; };
+		D8FA3538263CBAD400C17D39 /* Arura@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FA3532263CBAD400C17D39 /* Arura@3x.png */; };
+		D8FA3539263CBAD400C17D39 /* Watermelon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FA3533263CBAD400C17D39 /* Watermelon@2x.png */; };
+		D8FA353A263CBAD400C17D39 /* Watermelon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FA3534263CBAD400C17D39 /* Watermelon@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,12 @@
 		41A69BF42398B6030091F811 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		41A69BF6239AB7DB0091F811 /* O T B.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "O T B.entitlements"; sourceTree = "<group>"; };
 		41F9E19A238B20B400A687DE /* DatePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
+		D8FA352F263CBAD400C17D39 /* Arura_Noir@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arura_Noir@2x.png"; sourceTree = "<group>"; };
+		D8FA3530263CBAD400C17D39 /* Arura_Noir@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arura_Noir@3x.png"; sourceTree = "<group>"; };
+		D8FA3531263CBAD400C17D39 /* Arura@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arura@2x.png"; sourceTree = "<group>"; };
+		D8FA3532263CBAD400C17D39 /* Arura@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arura@3x.png"; sourceTree = "<group>"; };
+		D8FA3533263CBAD400C17D39 /* Watermelon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Watermelon@2x.png"; sourceTree = "<group>"; };
+		D8FA3534263CBAD400C17D39 /* Watermelon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Watermelon@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,7 @@
 		4182D6A8238AE6AE00C45A45 /* OTB */ = {
 			isa = PBXGroup;
 			children = (
+				D8FA352E263CBAB000C17D39 /* App Icons */,
 				41A69BF6239AB7DB0091F811 /* O T B.entitlements */,
 				4182D6A9238AE6AF00C45A45 /* AppDelegate.swift */,
 				4182D6AB238AE6AF00C45A45 /* SceneDelegate.swift */,
@@ -137,6 +150,19 @@
 				4182D6D0238AE6B100C45A45 /* Info.plist */,
 			);
 			path = OTBUITests;
+			sourceTree = "<group>";
+		};
+		D8FA352E263CBAB000C17D39 /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D8FA3530263CBAD400C17D39 /* Arura_Noir@3x.png */,
+				D8FA352F263CBAD400C17D39 /* Arura_Noir@2x.png */,
+				D8FA3531263CBAD400C17D39 /* Arura@2x.png */,
+				D8FA3532263CBAD400C17D39 /* Arura@3x.png */,
+				D8FA3533263CBAD400C17D39 /* Watermelon@2x.png */,
+				D8FA3534263CBAD400C17D39 /* Watermelon@3x.png */,
+			);
+			path = "App Icons";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +269,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FA3537263CBAD400C17D39 /* Arura@2x.png in Resources */,
+				D8FA3538263CBAD400C17D39 /* Arura@3x.png in Resources */,
+				D8FA3535263CBAD400C17D39 /* Arura_Noir@2x.png in Resources */,
 				4182D6B9238AE6B100C45A45 /* LaunchScreen.storyboard in Resources */,
+				D8FA3539263CBAD400C17D39 /* Watermelon@2x.png in Resources */,
 				4182D6B6238AE6B100C45A45 /* Assets.xcassets in Resources */,
+				D8FA3536263CBAD400C17D39 /* Arura_Noir@3x.png in Resources */,
 				4182D6B1238AE6AF00C45A45 /* Main.storyboard in Resources */,
+				D8FA353A263CBAD400C17D39 /* Watermelon@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

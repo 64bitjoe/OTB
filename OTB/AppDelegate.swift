@@ -77,5 +77,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // MARK: - Icon Selection Support.
+    
+    enum BMAppIcon: CaseIterable {
+        case classic,
+             Arura_Noir,
+             Aura,
+             Watermelon
+    }
+    
 }
 

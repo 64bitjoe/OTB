@@ -171,7 +171,7 @@ class ViewController: UIViewController {
         
         // Add array and radomize the message
           //Set the link to share.
-          if let link = NSURL(string: "https://otb.joeis.us")
+          if let link = NSURL(string: "https://www.joeis.us")
         
           {
             let objectsToShare = [message,link] as [Any]
@@ -189,7 +189,7 @@ class ViewController: UIViewController {
         
         // Add array and radomize the message
           //Set the link to share.
-          if let link = NSURL(string: "https://otb.joeis.us")
+          if let link = NSURL(string: "https://www.joeis.us")
         
           {
             let objectsToShare = [message,link] as [Any]

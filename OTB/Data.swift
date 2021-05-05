@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 // MARK: SHARE TIME 
 
-let SHARE_0 = "I have __DAYS__ #OTBAPP 🥳"
+let SHARE_0 = "I have __DAYS__  🥳"
 let SHARE_1 = "I should start packing with __DAYS__ left! 😅"
 let SHARE_2 = "I Should stop bragging __DAYS__ left 😎"
-let SHARE_3 = "Dont fuck it up __DAYS__ left 🙈 "
-let SHARE_4 = "Time to partayyyy 😎 __DAYS__ #OTBAPP"
-let SHARE_5 = "Joe, Stop telling people how many days are left. They already want you to leave. __DAYS__ #OTBAPP"
+let SHARE_3 = "Don't fuck it up __DAYS__ left 🙈 "
+let SHARE_4 = "Time to partayyyy 😎 __DAYS__ "
+let SHARE_5 = "Joe, Stop telling people how many days are left. They already want you to leave. __DAYS__ "
 
 // MARK: QUOTES FOR MAIN VIEW
 let QUOTE_0 = "\"Put something inspirational here\""
-let QUOTE_1 = "\"Dont Fuck it up - Logan 2019 - Joe 2019\""
+let QUOTE_1 = ""
 let QUOTE_2 = "I think it’s great that they’re doing this, and I hope it works out."
 let QUOTE_3 = "Most important, have the courage to follow your heart and intuition."
 let QUOTE_4 = "\"Be proud of yourself. Do the best work of your life.\""
