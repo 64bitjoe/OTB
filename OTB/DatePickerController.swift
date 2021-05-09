@@ -11,12 +11,17 @@ class DatePickerController: ViewController {
     
     @IBOutlet weak var bagroundView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var textFeild: UITextField!
+    @IBOutlet weak var emojiField: UITextField!
+    @IBOutlet weak var bgImageView: UIImageView!
     
     override func viewDidLoad() {
         initHideKeybaord()
+        bgImageView.image = randomImage()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
          navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -45,28 +50,30 @@ class DatePickerController: ViewController {
         
         if segmentedControl.selectedSegmentIndex == 0 {
             dateLabel.text = strDate
+            segmentedControl.setTitle(textFeild.text ?? "", forSegmentAt: 0)
             let result = strDate.split(separator: "-")
             let defaults = UserDefaults.standard
             UserDefaults.standard.set(String(result[0]), forKey: "day_0")
             UserDefaults.standard.set(String(result[1]), forKey: "month_0")
             UserDefaults.standard.set(String(result[2]), forKey: "year_0")
+            UserDefaults.standard.set(textFeild.text, forKey: "name_0")
+            UserDefaults.standard.set(emojiField.text, forKey: "emoji_0")
             defaults.synchronize()
             
         } else if segmentedControl.selectedSegmentIndex == 1 {
            dateLabel.text = strDate
+            segmentedControl.setTitle(textFeild.text ?? "", forSegmentAt: 1)
            let result = strDate.split(separator: "-")
            let defaults = UserDefaults.standard
-           UserDefaults.standard.set(String(result[0]), forKey: "day_1")
-           UserDefaults.standard.set(String(result[1]), forKey: "month_1")
-           UserDefaults.standard.set(String(result[2]), forKey: "year_1")
+            UserDefaults.standard.set(String(result[0]), forKey: "day_1")
+            UserDefaults.standard.set(String(result[1]), forKey: "month_1")
+            UserDefaults.standard.set(String(result[2]), forKey: "year_1")
+            UserDefaults.standard.set(textFeild.text, forKey: "name_1")
+            UserDefaults.standard.set(emojiField.text, forKey: "emoji_1")
            defaults.synchronize()
            
 
         }
-    }
-    @IBAction func settingsButton(_ sender: Any) {
-        
-    overrideUserInterfaceStyle = .dark
     }
 
 }

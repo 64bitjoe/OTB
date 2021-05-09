@@ -118,6 +118,7 @@ class ViewController: UIViewController {
         dayLabel.text = "\(daysLeft ?? 0 ) Days"
         hrLabel.text = "\(hoursLeft ?? 0) Hours"
         minLabel.text = "\(minutesLeft ?? 0) Minutes"
+        
     }
     func updateSecondTimer() {
         let date = NSDate()
