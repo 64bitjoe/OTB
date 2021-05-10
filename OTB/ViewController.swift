@@ -12,18 +12,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var hrLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var minLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var platterView: UIView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var inspirationLabel: UILabel!
     @IBOutlet weak var secondPlatterView: UIView!
-    @IBOutlet weak var secondImageView: UIImageView!
     @IBOutlet weak var secondDayLabel: UILabel!
     @IBOutlet weak var secondHrLabel: UILabel!
     @IBOutlet weak var secondMinLabel: UILabel!
     
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var emojiLabel: UILabel!
+    @IBOutlet weak var seccondEmojiLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -31,18 +32,6 @@ class ViewController: UIViewController {
         updateTimer()
         updateSecondTimer()
         
-        if #available(iOS 13.0, *) {
-            let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .heavy, scale: .large)
-            let img = UIImage(systemName: "sunset", withConfiguration: config)
-            imageView.image = img
-            
-            let secondConfig = UIImage.SymbolConfiguration(pointSize: 25, weight: .heavy, scale: .large)
-            let secondImg = UIImage(systemName: "airplane", withConfiguration: secondConfig)
-            secondImageView.image = secondImg
-            
-        } else {
-            return 
-        }
         secondPlatterView.layer.cornerRadius = 10
         secondPlatterView.clipsToBounds = true
         platterView.layer.cornerRadius = 10
@@ -118,7 +107,8 @@ class ViewController: UIViewController {
         dayLabel.text = "\(daysLeft ?? 0 ) Days"
         hrLabel.text = "\(hoursLeft ?? 0) Hours"
         minLabel.text = "\(minutesLeft ?? 0) Minutes"
-        
+        emojiLabel.text = defaults.string(forKey: "emoji_0")
+        descriptionLabel.text = defaults.string(forKey: "name_0")
     }
     func updateSecondTimer() {
         let date = NSDate()
@@ -149,6 +139,7 @@ class ViewController: UIViewController {
         secondDayLabel.text = "\(daysLeft ?? 0 ) Days"
         secondHrLabel.text = "\(hoursLeft ?? 0) Hours"
         secondMinLabel.text = "\(minutesLeft ?? 0) Minutes"
+//        seccondEmojiLabel.text = defaults.string(forKey: "seccondemoji_0")
     }
     
     // MARK: Button Actions

@@ -5,13 +5,15 @@
 //  Copyright ©  2019 All rights reserved.
 //
 
+
+// TODO: - ADD REJECTION FOR NON EMOJIS IN THE EMOJI TEXT FEILD ON SAVE!!
+
 import UIKit
 
 class DatePickerController: ViewController {
     
     @IBOutlet weak var bagroundView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var textFeild: UITextField!
