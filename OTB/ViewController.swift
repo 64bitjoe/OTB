@@ -26,7 +26,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var seccondEmojiLabel: UILabel!
     
-
+    let competitionDate = NSDateComponents()
+    let date = NSDate()
+    let calendar = Calendar.current
+    let userCalendar = Calendar.current
+    let defaults = UserDefaults.standard
+    var timer = Timer()
+    
     override func viewDidLoad() {
         firstLaunch()
         updateTimer()
@@ -39,6 +45,7 @@ class ViewController: UIViewController {
         dayLabel.font = .boldSystemFont(ofSize: 47)
         secondDayLabel.font = .boldSystemFont(ofSize: 47)
         
+        
     super.viewDidLoad()
     }
     
@@ -49,11 +56,13 @@ class ViewController: UIViewController {
         updateSecondTimer()
         inspirationLabel.text = randomText()
         backgroundImageView.image = randomImage()
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
          navigationController?.setNavigationBarHidden(false, animated: animated)
+        timer.invalidate()
     }
 // MARK: First Launch
     func firstLaunch(){
@@ -64,82 +73,97 @@ class ViewController: UIViewController {
             let strDate = "01-01-2020"
             let result = strDate.split(separator: "-")
             let defaults = UserDefaults.standard
-            UserDefaults.standard.set(String(result[0]), forKey: "day_0")
-            UserDefaults.standard.set(String(result[1]), forKey: "month_0")
-            UserDefaults.standard.set(String(result[2]), forKey: "year_0")
-            UserDefaults.standard.set(String(result[0]), forKey: "day_1")
-            UserDefaults.standard.set(String(result[1]), forKey: "month_1")
-            UserDefaults.standard.set(String(result[2]), forKey: "year_1")
+            defaults.set(String(result[0]), forKey: "day_0")
+            defaults.set(String(result[1]), forKey: "month_0")
+            defaults.set(String(result[2]), forKey: "year_0")
+            defaults.set(String(result[0]), forKey: "day_1")
+            defaults.set(String(result[1]), forKey: "month_1")
+            defaults.set(String(result[2]), forKey: "year_1")
+            defaults.set(String("09"), forKey: "hour_0")
+            defaults.set(String("41"), forKey: "minute_0")
+            defaults.set(String("09"), forKey: "hour_1")
+            defaults.set(String("41"), forKey: "minute_1")
             defaults.synchronize()
             UserDefaults.standard.set(true, forKey: "launchednever")
             
-            //display UI alert Giving option to set First Coundown timer
+            // TO DO: Display UI alert Giving option to set First Coundown timer
             
         }
     }
 // MARK: Update Timer
-    func updateTimer() {
-        let date = NSDate()
-        let calendar = Calendar.current
+    @objc func updateTimer() {
         let components = calendar.dateComponents([.hour, .minute, .month, .year, .day], from: date as Date)
         let currentDate = calendar.date(from: components)
-        let userCalendar = Calendar.current
-        let defaults = UserDefaults.standard
         let year = defaults.string(forKey: "year_0")
-        let yearint = Int(year!)
+        let yearInt = Int(year!)
         let month = defaults.string(forKey: "month_0")
-        let monthint = Int(month!)
+        let monthInt = Int(month!)
         let day = defaults.string(forKey: "day_0")
-        let dayint = Int(day!)
+        let dayInt = Int(day!)
+        let hour = defaults.string(forKey: "hour_0")
+        let hourInt = Int(hour!)
+        let minute = defaults.string(forKey: "minute_0")
+        let minuteInt = Int(minute!)
         
         // Date of event
         let competitionDate = NSDateComponents()
-        competitionDate.year = yearint!
-        competitionDate.month = monthint!
-        competitionDate.day = dayint!
-        competitionDate.hour = 00
-        competitionDate.minute = 00
+        competitionDate.year = yearInt!
+        competitionDate.month = monthInt!
+        competitionDate.day = dayInt!
+        competitionDate.hour = hourInt!
+        competitionDate.minute = minuteInt!
         let competitionDay = userCalendar.date(from: competitionDate as DateComponents)!
         let CompetitionDayDifference = calendar.dateComponents([.day, .hour, .minute], from: currentDate!, to: competitionDay)
         let daysLeft = CompetitionDayDifference.day
         let hoursLeft = CompetitionDayDifference.hour
         let minutesLeft = CompetitionDayDifference.minute
-        dayLabel.text = "\(daysLeft ?? 0 ) Days"
-        hrLabel.text = "\(hoursLeft ?? 0) Hours"
-        minLabel.text = "\(minutesLeft ?? 0) Minutes"
+        
         emojiLabel.text = defaults.string(forKey: "emoji_0")
         descriptionLabel.text = defaults.string(forKey: "name_0")
+        
+        // TO DO - Adjust Days Hrs mins labels based on count
+        DispatchQueue.main.async {
+            self.dayLabel.text = "\(daysLeft ?? 0 ) Days"
+            self.hrLabel.text = "\(hoursLeft ?? 0) Hours"
+            self.minLabel.text = "\(minutesLeft ?? 0) Minutes"
+            print("This runs every 15 secconds")
+        }
+        
     }
-    func updateSecondTimer() {
-        let date = NSDate()
-        let calendar = Calendar.current
+    @objc func updateSecondTimer() {
         let components = calendar.dateComponents([.hour, .minute, .month, .year, .day], from: date as Date)
         let currentDate = calendar.date(from: components)
-        let userCalendar = Calendar.current
-        let defaults = UserDefaults.standard
         let year = defaults.string(forKey: "year_1")
         let yearint = Int(year!)
         let month = defaults.string(forKey: "month_1")
         let monthint = Int(month!)
         let day = defaults.string(forKey: "day_1")
         let dayint = Int(day!)
+        let hour = defaults.string(forKey: "hour_1")
+        let hourInt = Int(hour!)
+        let minute = defaults.string(forKey: "minute_1")
+        let minuteInt = Int(minute!)
         
         // Date of event
-        let competitionDate = NSDateComponents()
         competitionDate.year = yearint!
         competitionDate.month = monthint!
         competitionDate.day = dayint!
-        competitionDate.hour = 10
-        competitionDate.minute = 45
+        competitionDate.hour = hourInt!
+        competitionDate.minute = minuteInt!
         let competitionDay = userCalendar.date(from: competitionDate as DateComponents)!
         let CompetitionDayDifference = calendar.dateComponents([.day, .hour, .minute], from: currentDate!, to: competitionDay)
         let daysLeft = CompetitionDayDifference.day
         let hoursLeft = CompetitionDayDifference.hour
         let minutesLeft = CompetitionDayDifference.minute
-        secondDayLabel.text = "\(daysLeft ?? 0 ) Days"
-        secondHrLabel.text = "\(hoursLeft ?? 0) Hours"
-        secondMinLabel.text = "\(minutesLeft ?? 0) Minutes"
-//        seccondEmojiLabel.text = defaults.string(forKey: "seccondemoji_0")
+        
+        seccondEmojiLabel.text = defaults.string(forKey: "emoji_1")
+        
+        DispatchQueue.main.async {
+            self.secondDayLabel.text = "\(daysLeft ?? 0 ) Days"
+            self.secondHrLabel.text = "\(hoursLeft ?? 0) Hours"
+            self.secondMinLabel.text = "\(minutesLeft ?? 0) Minutes"
+           
+        }
     }
     
     // MARK: Button Actions
@@ -150,19 +174,14 @@ class ViewController: UIViewController {
         self.navigationController!.pushViewController(controller!, animated: true)
         
     }
-    @IBAction func updateButton(_ sender: Any) {
-        updateTimer()
-    }
+
     
     @IBAction func shareButtonClicked(sender: AnyObject)
       {
-          //Set the default sharing message.
         
         let data = randomShare()
         let message = data.replacingOccurrences(of: "__DAYS__", with: "\(dayLabel.text ?? "UNKNOWN")")
         
-        // Add array and radomize the message
-          //Set the link to share.
           if let link = NSURL(string: "https://www.joeis.us")
         
           {
@@ -179,8 +198,6 @@ class ViewController: UIViewController {
         let data = randomShare()
         let message = data.replacingOccurrences(of: "__DAYS__", with: "\(secondDayLabel.text ?? "UNKNOWN")")
         
-        // Add array and radomize the message
-          //Set the link to share.
           if let link = NSURL(string: "https://www.joeis.us")
         
           {
